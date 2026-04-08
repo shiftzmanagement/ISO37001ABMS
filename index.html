@@ -219,6 +219,7 @@ var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyTiNZcGxeupvd2KBYEMspN
 function submitForm(btn) {
   var company = document.getElementById('fCompany').value.trim();
   var name    = document.getElementById('fName').value.trim();
+  var position= document.getElementById('fPosition').value.trim();
   var email   = document.getElementById('fEmail').value.trim();
   var phone   = document.getElementById('fPhone').value.trim();
 
@@ -250,6 +251,7 @@ function submitForm(btn) {
     btn.style.cursor = 'default';
     document.getElementById('fCompany').value = '';
     document.getElementById('fName').value = '';
+	document.getElementById('fPosition').value = '';
     document.getElementById('fEmail').value = '';
     document.getElementById('fPhone').value = '';
     setTimeout(function() {
