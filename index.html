@@ -227,7 +227,7 @@ function submitForm(btn) {
   var email   = document.getElementById('fEmail').value.trim();
   var phone   = document.getElementById('fPhone').value.trim();
 
-  if (!company || !name || !email || !phone) {
+  if (!company || !name || !position || !email || !phone) {
     alert('Please fill in all required fields before submitting.');
     return;
   }
@@ -246,7 +246,7 @@ function submitForm(btn) {
     mode: 'no-cors',
     cache: 'no-cache',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ company, name, email, phone })
+    body: JSON.stringify({ company, name, position, email, phone })
   })
   .then(function() {
     btn.textContent = '✓ Thank you for your enquiry. We will contact you at the earliest';
